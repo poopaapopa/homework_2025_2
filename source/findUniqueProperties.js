@@ -9,7 +9,7 @@
  * @returns {Object}
  */
 function findUniqueProperties (object1, object2) {
-    if (typeof object1 != "object" || typeof object2 != "object")
+    if (!(object1 instanceof Object) || !(object2 instanceof Object))
         return {};
     const uniqueObject = {};
     for (let key in object1)
